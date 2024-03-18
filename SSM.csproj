@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\addbutton.png" />
+    <None Remove="Resources\clearbutton.png" />
+    <None Remove="Resources\clearsheetbutton.png" />
+    <None Remove="Resources\computebutton.png" />
+    <None Remove="Resources\deletebutton.png" />
+    <None Remove="Resources\exitbutton.png" />
+    <None Remove="Resources\savebutton.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\addbutton.png" />
+    <EmbeddedResource Include="Resources\clearbutton.png" />
+    <EmbeddedResource Include="Resources\clearsheetbutton.png" />
+    <EmbeddedResource Include="Resources\computebutton.png" />
+    <EmbeddedResource Include="Resources\deletebutton.png" />
+    <EmbeddedResource Include="Resources\exitbutton.png" />
+    <EmbeddedResource Include="Resources\savebutton.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
